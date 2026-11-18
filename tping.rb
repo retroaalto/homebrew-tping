@@ -5,20 +5,20 @@
 class Tping < Formula
   desc "Live terminal ping latency graph"
   homepage "https://github.com/retroaalto/tping"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/retroaalto/tping/releases/download/v1.0.0/tping_1.0.0_linux_amd64.tar.gz"
-    sha256 "656692b2fb0575a315bebdcf4e2cee3856b9a4c7ac742ef7ae65eecfb0c7c9e4"
+    url "https://github.com/retroaalto/tping/releases/download/v1.1.0/tping_1.1.0_linux_amd64.tar.gz"
+    sha256 "afa91017db7750173db48e9abc7aa2ede39878e933464adfa902daf7739033d2"
     define_method(:install) do
       bin.install "tping"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/retroaalto/tping/releases/download/v1.0.0/tping_1.0.0_linux_arm64.tar.gz"
-    sha256 "530f2f32ec211666901154599d87b8f67b5285ab128f1a1444c623d17e5cf801"
+    url "https://github.com/retroaalto/tping/releases/download/v1.1.0/tping_1.1.0_linux_arm64.tar.gz"
+    sha256 "18e038c5c4d0c894d40599ddb754ae1fe925cbd48c8be9ea8597dad51de86c17"
     define_method(:install) do
       bin.install "tping"
     end
